@@ -5,10 +5,14 @@ import { NotesService } from './notes.service';
 export class NotesController {
   constructor(private readonly notesService: NotesService) {}
 
+  
   @Post(':userId')
   create(@Param('userId') userId: number, @Body() noteData) {
     return this.notesService.create(noteData, userId);
   }
+
+
+
 
   @Get()
   findAll() {
@@ -29,4 +33,6 @@ export class NotesController {
   delete(@Param('id') id: number) {
     return this.notesService.delete(id);
   }
+
+
 }
