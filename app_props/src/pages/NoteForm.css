@@ -13,6 +13,8 @@
   transition: border-color 0.3s ease;
 }
 
+
+
 .note-form input:focus,
 .note-form textarea:focus {
   outline: none;
